@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "CardVariant Scanner",
+    "slug": "cardvariant-scanner",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "cardvariant",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B0E13",
+    "ios": {
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.cardvariant.scanner"
+    },
+    "android": {
+      "package": "com.cardvariant.scanner",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0E13",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "permissions": ["android.permission.CAMERA"],
+      "blockedPermissions": ["android.permission.RECORD_AUDIO"],
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "CardVariant Scanner uses the camera to photograph the front and back of your trading cards.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B0E13",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ]
+    ],
+    "experiments": {
+      "reactCompiler": true
+    }
+  }
+}
